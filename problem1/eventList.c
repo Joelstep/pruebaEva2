@@ -5,7 +5,7 @@
 
 EventList *CreateEventList(void)
 {
-    EventList *eventList = NULL;
+    EventList *eventList = malloc();
 
     return eventList;
 }
@@ -26,7 +26,8 @@ Event *SearchEvent(EventList *this, char *name)
 
 void AddEvent(EventList *this, Event *event)
 {
-
+    this->head = event;
+    this->isEmpty = 0;
 }
 
 void RemoveEvent(EventList *this, char *name)
